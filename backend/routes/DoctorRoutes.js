@@ -1,0 +1,17 @@
+import express from "express";
+import { DoctorInformation, DoctorLogin, DoctorLogout, DoctorRegistration } from "../controllers/DoctorAuthentication.js";
+import { CheckPassword } from "../middlewares/CheckPassword.js";
+import { IsHospitalExist } from "../middlewares/IsHospitalExist.js";
+import multer from "multer";
+import { DoctorIsAuthenticated } from "../middlewares/DoctorIsAuthenticated.js";
+import { DoctorUserInformation } from "../controllers/PatientAuthentication.js";
+import { DoctorsList } from "../controllers/DoctorControl.js";
+const uploads = multer();
+const doctorRoutes = express();
+doctorRoutes.post("/register", uploads.single('profile_img'), DoctorRegistration);
+doctorRoutes.post("/login", DoctorLogin);
+doctorRoutes.get("/get-doctor-info", DoctorInformation);
+doctorRoutes.get("/get-doctor-user-info/:id", DoctorUserInformation);
+doctorRoutes.post("/logout", DoctorIsAuthenticated, DoctorLogout);
+doctorRoutes.get("/get-all-doctors", DoctorsList);
+export default doctorRoutes;

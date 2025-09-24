@@ -1,0 +1,16 @@
+.navbar1 {
+    display: flex;
+    align-items: center;
+    padding: var(--navbar-padding, 0.5rem/* 8px */);
+    /* min-height: 1rem64px; */
+    height: 25px;
+    width: 100%;
+}
+:where(.navbar1 > *:not(script, style)) {
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-width{
+    width: 11.5rem;
+}

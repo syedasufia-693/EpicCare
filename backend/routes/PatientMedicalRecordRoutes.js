@@ -1,0 +1,14 @@
+import express from "express";
+import multer from "multer";
+import { PatientMedicalHistoryAttributesDeletion, PatientMedicalHistoryDiagnosis, PatientMedicalHistoryPrescription, PatientMedicalHistoryRecordsAttributeInfo, PatientMedicalHistoryVaccination, PatientMedicalRecord, PatientMedicalRecordSubElementInfo, PatientProfileImageUpdate } from "../controllers/PatientMedicalRecord.js";
+const PatientMedicalRecordRoutes = express.Router();
+const upload = multer();
+PatientMedicalRecordRoutes.put("/records/:id", PatientMedicalRecord);
+PatientMedicalRecordRoutes.put("/records/prof_img/:id", upload.single("FILE"), PatientProfileImageUpdate);
+PatientMedicalRecordRoutes.put("/records/prescription/:id", upload.single("diagnosis_reports_images"), PatientMedicalHistoryPrescription);
+PatientMedicalRecordRoutes.put("/records/diagnosis/:id", upload.single("diagnosis_reports_image"), PatientMedicalHistoryDiagnosis);
+PatientMedicalRecordRoutes.put("/records/vaccination/:id", PatientMedicalHistoryVaccination);
+PatientMedicalRecordRoutes.get("/records/element/fetch/:id", PatientMedicalRecordSubElementInfo);
+PatientMedicalRecordRoutes.delete("/records/attributes/delete/:id", PatientMedicalHistoryAttributesDeletion);
+PatientMedicalRecordRoutes.get("/records/attributes/fetch/:id", PatientMedicalHistoryRecordsAttributeInfo);
+export default PatientMedicalRecordRoutes;

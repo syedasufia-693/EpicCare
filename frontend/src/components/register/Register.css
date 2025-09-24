@@ -1,0 +1,54 @@
+.register-inputs{
+    background-color: #ffffff;
+    padding-left: 5px;
+    padding-top : 3px;
+    outline: 2px solid #4caf4f92; /* Set the outline color and width */
+  outline-offset: 1px;
+  border-radius: 3px;
+    width: 85%
+}
+.register-inputs:focus{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.no-scrollbar {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Hide the scrollbar for WebKit browsers (Chrome, Safari) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.gender-button {
+    border: 2px solid #217558;
+    color: #217558;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.gender-button:first-child {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.gender-button:last-child {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.gender-button:not(:last-child) {
+    border-right: none;
+}
+
+.gender-button.active {
+    background-color: #217558;
+    color: white;
+}
+
+.gender-button:hover {
+    background-color: #1e6a4d;
+    color: white;
+}

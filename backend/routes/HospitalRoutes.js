@@ -1,0 +1,13 @@
+import express from "express";
+import { HospitalInformation, HospitalLogin, HospitalLogout, HospitalRegistration } from "../controllers/HospitalAuthentication.js";
+import { CheckPassword } from "../middlewares/CheckPassword.js";
+import { HospitalIsAuthenticated } from "../middlewares/HospitalIsAuthenticated.js";
+import multer from "multer";
+import { SpecificPatientTimeLine } from "../controllers/HospitalControl.js";
+const upload = multer();
+const HospitalRoutes = express();
+HospitalRoutes.post("/register", upload.single('logo_img'), HospitalRegistration);
+HospitalRoutes.post("/login", HospitalLogin);
+HospitalRoutes.get("/hospital-info", HospitalInformation);
+HospitalRoutes.post("/logout", HospitalIsAuthenticated, HospitalLogout);
+export default HospitalRoutes;

@@ -1,0 +1,69 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Build outputs
+build/
+dist/
+
+# Environment variables
+.env
+.env.*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Python-related
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Flask cache
+instance/
+*.db
+*.sqlite3
+
+# Jupyter Notebooks (if any)
+.ipynb_checkpoints/
+
+# Compiled files
+*.so
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+.coverage.*
+
+# Test output
+pytest_cache/
+junit.xml
+
+# Misc
+*.bak
+*.tmp

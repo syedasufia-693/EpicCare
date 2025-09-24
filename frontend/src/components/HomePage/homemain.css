@@ -1,0 +1,120 @@
+.home-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-top: 6rem;
+}
+
+.hometext {
+    padding: 2rem;
+    margin-left: 4rem;
+}
+
+#h1-home-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3rem;
+    color: rgb(31, 30, 30);
+}
+
+#p-home-text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.4rem;
+    color: rgb(31, 30, 30);
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8 51%, #757F9A 100%);
+
+    margin-top: 2rem;
+    width: 6rem;
+    height: 2rem;
+    padding: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.chartall {
+    border: transparent;
+    width: 30%;
+    padding: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height: 30%;
+    border-radius: 1rem;
+    margin-right: 4rem;
+}
+
+.chart1 {
+    border: transparent;
+    height: 10rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+.charts2section {
+    display: flex;
+    width: 100%;
+
+}
+
+.chart2 {
+    border: transparent;
+    height: 10rem;
+    width: 48%;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-right: 8%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.chart3 {
+    border: transparent;
+    width: 30%;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height: 10rem;
+    border-radius: 1rem;
+}
+
+.outerchart {
+    border: transparent;
+    width: 10%;
+    position: absolute;
+    right: 520px;
+    top: 100px;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height: 10rem;
+    border-radius: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .home-main {
+        flex-direction: column-reverse;
+
+    }
+
+    .chart1 .chart2 {
+        width: 100%;
+    }
+
+    .outerchart {
+        position: none;
+    }
+}
