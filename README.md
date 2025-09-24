@@ -47,7 +47,7 @@ The system includes a user-friendly chatbot that offers instant support, guidanc
 1. Clone the repository:
 
    ```bash
-   git clone [https://github.com/syedasufia-693/EpicCare](https://github.com/syedasufia-693/EpicCare)
+   git clone https://github.com/syedasufia-693/EpicCare
    ```
 2. Navigate to the project folder:
 
